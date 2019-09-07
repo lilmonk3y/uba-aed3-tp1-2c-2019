@@ -1,4 +1,4 @@
-# Install script for directory: /Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/lib/googletest/googlemock
+# Install script for directory: /Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/uba-aed3-tp1-2c-2019/lib/googletest/googlemock
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -33,11 +33,11 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/lib/googletest/googlemock/include/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/uba-aed3-tp1-2c-2019/lib/googletest/googlemock/include/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/cmake-build-debug/lib/googletest/googlemock/libgmockd.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/uba-aed3-tp1-2c-2019/cmake-build-debug/lib/googletest/googlemock/libgmockd.a")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libgmockd.a" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libgmockd.a")
     execute_process(COMMAND "/Library/Developer/CommandLineTools/usr/bin/ranlib" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libgmockd.a")
@@ -45,7 +45,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/cmake-build-debug/lib/googletest/googlemock/libgmock_maind.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/uba-aed3-tp1-2c-2019/cmake-build-debug/lib/googletest/googlemock/libgmock_maind.a")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libgmock_maind.a" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libgmock_maind.a")
     execute_process(COMMAND "/Library/Developer/CommandLineTools/usr/bin/ranlib" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libgmock_maind.a")
@@ -53,16 +53,16 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/cmake-build-debug/lib/googletest/googlemock/gtest/generated/gmock.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/uba-aed3-tp1-2c-2019/cmake-build-debug/lib/googletest/googlemock/gtest/generated/gmock.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/cmake-build-debug/lib/googletest/googlemock/gtest/generated/gmock_main.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/uba-aed3-tp1-2c-2019/cmake-build-debug/lib/googletest/googlemock/gtest/generated/gmock_main.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/cmake-build-debug/lib/googletest/googlemock/gtest/cmake_install.cmake")
+  include("/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/uba-aed3-tp1-2c-2019/cmake-build-debug/lib/googletest/googlemock/gtest/cmake_install.cmake")
 
 endif()
 

@@ -1,1 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/c++   -std=c++11 -g -Wall -O2 -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/back-main.dir/src/executables/bruteForce-main.cpp.o CMakeFiles/back-main.dir/src/entities/Item.cpp.o CMakeFiles/back-main.dir/src/solutions/BruteForce.cpp.o CMakeFiles/back-main.dir/src/solutions/KnapSack.cpp.o  -o back-main 

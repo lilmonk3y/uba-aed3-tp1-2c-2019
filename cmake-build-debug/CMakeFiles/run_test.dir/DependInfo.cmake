@@ -4,11 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/src/entities/Item.cpp" "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/cmake-build-debug/CMakeFiles/run_test.dir/src/entities/Item.cpp.o"
-  "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/src/solutions/BackTracking.cpp" "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/cmake-build-debug/CMakeFiles/run_test.dir/src/solutions/BackTracking.cpp.o"
-  "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/src/solutions/BruteForce.cpp" "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/cmake-build-debug/CMakeFiles/run_test.dir/src/solutions/BruteForce.cpp.o"
-  "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/src/solutions/KnapSack.cpp" "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/cmake-build-debug/CMakeFiles/run_test.dir/src/solutions/KnapSack.cpp.o"
-  "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/test/solutions/BruteForceTest.cpp" "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/cmake-build-debug/CMakeFiles/run_test.dir/test/solutions/BruteForceTest.cpp.o"
+  "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/uba-aed3-tp1-2c-2019/src/entities/Item.cpp" "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/uba-aed3-tp1-2c-2019/cmake-build-debug/CMakeFiles/run_test.dir/src/entities/Item.cpp.o"
+  "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/uba-aed3-tp1-2c-2019/src/solutions/BackTracking.cpp" "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/uba-aed3-tp1-2c-2019/cmake-build-debug/CMakeFiles/run_test.dir/src/solutions/BackTracking.cpp.o"
+  "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/uba-aed3-tp1-2c-2019/src/solutions/BruteForce.cpp" "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/uba-aed3-tp1-2c-2019/cmake-build-debug/CMakeFiles/run_test.dir/src/solutions/BruteForce.cpp.o"
+  "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/uba-aed3-tp1-2c-2019/src/solutions/DinamicProgrammingBottomUp.cpp" "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/uba-aed3-tp1-2c-2019/cmake-build-debug/CMakeFiles/run_test.dir/src/solutions/DinamicProgrammingBottomUp.cpp.o"
+  "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/uba-aed3-tp1-2c-2019/src/solutions/DinamicProgrammingTopDown.cpp" "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/uba-aed3-tp1-2c-2019/cmake-build-debug/CMakeFiles/run_test.dir/src/solutions/DinamicProgrammingTopDown.cpp.o"
+  "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/uba-aed3-tp1-2c-2019/src/solutions/KnapSack.cpp" "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/uba-aed3-tp1-2c-2019/cmake-build-debug/CMakeFiles/run_test.dir/src/solutions/KnapSack.cpp.o"
+  "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/uba-aed3-tp1-2c-2019/test/solutions/KnapSackTest.cpp" "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/uba-aed3-tp1-2c-2019/cmake-build-debug/CMakeFiles/run_test.dir/test/solutions/KnapSackTest.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
@@ -21,8 +23,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/cmake-build-debug/lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
-  "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/cmake-build-debug/lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
+  "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/uba-aed3-tp1-2c-2019/cmake-build-debug/lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/uba-aed3-tp1-2c-2019/cmake-build-debug/lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

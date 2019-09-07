@@ -23,7 +23,7 @@ long BruteForce::run(int itemIndex, long capacity, std::vector<Item> *items, lon
         long noBranch = run(itemIndex+1,capacity,items,totalBenefit, totalCost);
 
         long yesBranch = run(itemIndex+1,capacity,items, totalBenefit + items->at(itemIndex).getBenefit(),
-                        totalCost + items->at(itemIndex).getSize());
+                        totalCost + items->at(itemIndex).getCost());
         return std::max(noBranch, yesBranch);
     }
 }

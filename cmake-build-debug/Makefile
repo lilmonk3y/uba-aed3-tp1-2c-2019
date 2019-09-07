@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/crivera/Documents/Facultad/aed3/tp1-2c-2019
+CMAKE_SOURCE_DIR = /Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/uba-aed3-tp1-2c-2019
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/uba-aed3-tp1-2c-2019/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,50 +68,6 @@ install/strip/fast: preinstall/fast
 	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -124,11 +80,55 @@ install/local/fast: preinstall/fast
 	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/cmake-build-debug/CMakeFiles /Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/uba-aed3-tp1-2c-2019/cmake-build-debug/CMakeFiles /Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/uba-aed3-tp1-2c-2019/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/uba-aed3-tp1-2c-2019/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -157,6 +157,71 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named top_down-main-time
+
+# Build rule for target.
+top_down-main-time: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 top_down-main-time
+.PHONY : top_down-main-time
+
+# fast build rule for target.
+top_down-main-time/fast:
+	$(MAKE) -f CMakeFiles/top_down-main-time.dir/build.make CMakeFiles/top_down-main-time.dir/build
+.PHONY : top_down-main-time/fast
+
+#=============================================================================
+# Target rules for targets named bottom_up-main-time
+
+# Build rule for target.
+bottom_up-main-time: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bottom_up-main-time
+.PHONY : bottom_up-main-time
+
+# fast build rule for target.
+bottom_up-main-time/fast:
+	$(MAKE) -f CMakeFiles/bottom_up-main-time.dir/build.make CMakeFiles/bottom_up-main-time.dir/build
+.PHONY : bottom_up-main-time/fast
+
+#=============================================================================
+# Target rules for targets named backtracking-main-time
+
+# Build rule for target.
+backtracking-main-time: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 backtracking-main-time
+.PHONY : backtracking-main-time
+
+# fast build rule for target.
+backtracking-main-time/fast:
+	$(MAKE) -f CMakeFiles/backtracking-main-time.dir/build.make CMakeFiles/backtracking-main-time.dir/build
+.PHONY : backtracking-main-time/fast
+
+#=============================================================================
+# Target rules for targets named bruteforce-main-time
+
+# Build rule for target.
+bruteforce-main-time: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bruteforce-main-time
+.PHONY : bruteforce-main-time
+
+# fast build rule for target.
+bruteforce-main-time/fast:
+	$(MAKE) -f CMakeFiles/bruteforce-main-time.dir/build.make CMakeFiles/bruteforce-main-time.dir/build
+.PHONY : bruteforce-main-time/fast
+
+#=============================================================================
+# Target rules for targets named bottom_up-main
+
+# Build rule for target.
+bottom_up-main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bottom_up-main
+.PHONY : bottom_up-main
+
+# fast build rule for target.
+bottom_up-main/fast:
+	$(MAKE) -f CMakeFiles/bottom_up-main.dir/build.make CMakeFiles/bottom_up-main.dir/build
+.PHONY : bottom_up-main/fast
+
+#=============================================================================
 # Target rules for targets named backtracking-main
 
 # Build rule for target.
@@ -168,6 +233,19 @@ backtracking-main: cmake_check_build_system
 backtracking-main/fast:
 	$(MAKE) -f CMakeFiles/backtracking-main.dir/build.make CMakeFiles/backtracking-main.dir/build
 .PHONY : backtracking-main/fast
+
+#=============================================================================
+# Target rules for targets named top_down-main
+
+# Build rule for target.
+top_down-main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 top_down-main
+.PHONY : top_down-main
+
+# fast build rule for target.
+top_down-main/fast:
+	$(MAKE) -f CMakeFiles/top_down-main.dir/build.make CMakeFiles/top_down-main.dir/build
+.PHONY : top_down-main/fast
 
 #=============================================================================
 # Target rules for targets named bruteforce-main
@@ -253,7 +331,13 @@ src/entities/Item.o: src/entities/Item.cpp.o
 
 # target to build an object file
 src/entities/Item.cpp.o:
+	$(MAKE) -f CMakeFiles/top_down-main-time.dir/build.make CMakeFiles/top_down-main-time.dir/src/entities/Item.cpp.o
+	$(MAKE) -f CMakeFiles/bottom_up-main-time.dir/build.make CMakeFiles/bottom_up-main-time.dir/src/entities/Item.cpp.o
+	$(MAKE) -f CMakeFiles/backtracking-main-time.dir/build.make CMakeFiles/backtracking-main-time.dir/src/entities/Item.cpp.o
+	$(MAKE) -f CMakeFiles/bruteforce-main-time.dir/build.make CMakeFiles/bruteforce-main-time.dir/src/entities/Item.cpp.o
+	$(MAKE) -f CMakeFiles/bottom_up-main.dir/build.make CMakeFiles/bottom_up-main.dir/src/entities/Item.cpp.o
 	$(MAKE) -f CMakeFiles/backtracking-main.dir/build.make CMakeFiles/backtracking-main.dir/src/entities/Item.cpp.o
+	$(MAKE) -f CMakeFiles/top_down-main.dir/build.make CMakeFiles/top_down-main.dir/src/entities/Item.cpp.o
 	$(MAKE) -f CMakeFiles/bruteforce-main.dir/build.make CMakeFiles/bruteforce-main.dir/src/entities/Item.cpp.o
 	$(MAKE) -f CMakeFiles/run_test.dir/build.make CMakeFiles/run_test.dir/src/entities/Item.cpp.o
 .PHONY : src/entities/Item.cpp.o
@@ -264,7 +348,13 @@ src/entities/Item.i: src/entities/Item.cpp.i
 
 # target to preprocess a source file
 src/entities/Item.cpp.i:
+	$(MAKE) -f CMakeFiles/top_down-main-time.dir/build.make CMakeFiles/top_down-main-time.dir/src/entities/Item.cpp.i
+	$(MAKE) -f CMakeFiles/bottom_up-main-time.dir/build.make CMakeFiles/bottom_up-main-time.dir/src/entities/Item.cpp.i
+	$(MAKE) -f CMakeFiles/backtracking-main-time.dir/build.make CMakeFiles/backtracking-main-time.dir/src/entities/Item.cpp.i
+	$(MAKE) -f CMakeFiles/bruteforce-main-time.dir/build.make CMakeFiles/bruteforce-main-time.dir/src/entities/Item.cpp.i
+	$(MAKE) -f CMakeFiles/bottom_up-main.dir/build.make CMakeFiles/bottom_up-main.dir/src/entities/Item.cpp.i
 	$(MAKE) -f CMakeFiles/backtracking-main.dir/build.make CMakeFiles/backtracking-main.dir/src/entities/Item.cpp.i
+	$(MAKE) -f CMakeFiles/top_down-main.dir/build.make CMakeFiles/top_down-main.dir/src/entities/Item.cpp.i
 	$(MAKE) -f CMakeFiles/bruteforce-main.dir/build.make CMakeFiles/bruteforce-main.dir/src/entities/Item.cpp.i
 	$(MAKE) -f CMakeFiles/run_test.dir/build.make CMakeFiles/run_test.dir/src/entities/Item.cpp.i
 .PHONY : src/entities/Item.cpp.i
@@ -275,7 +365,13 @@ src/entities/Item.s: src/entities/Item.cpp.s
 
 # target to generate assembly for a file
 src/entities/Item.cpp.s:
+	$(MAKE) -f CMakeFiles/top_down-main-time.dir/build.make CMakeFiles/top_down-main-time.dir/src/entities/Item.cpp.s
+	$(MAKE) -f CMakeFiles/bottom_up-main-time.dir/build.make CMakeFiles/bottom_up-main-time.dir/src/entities/Item.cpp.s
+	$(MAKE) -f CMakeFiles/backtracking-main-time.dir/build.make CMakeFiles/backtracking-main-time.dir/src/entities/Item.cpp.s
+	$(MAKE) -f CMakeFiles/bruteforce-main-time.dir/build.make CMakeFiles/bruteforce-main-time.dir/src/entities/Item.cpp.s
+	$(MAKE) -f CMakeFiles/bottom_up-main.dir/build.make CMakeFiles/bottom_up-main.dir/src/entities/Item.cpp.s
 	$(MAKE) -f CMakeFiles/backtracking-main.dir/build.make CMakeFiles/backtracking-main.dir/src/entities/Item.cpp.s
+	$(MAKE) -f CMakeFiles/top_down-main.dir/build.make CMakeFiles/top_down-main.dir/src/entities/Item.cpp.s
 	$(MAKE) -f CMakeFiles/bruteforce-main.dir/build.make CMakeFiles/bruteforce-main.dir/src/entities/Item.cpp.s
 	$(MAKE) -f CMakeFiles/run_test.dir/build.make CMakeFiles/run_test.dir/src/entities/Item.cpp.s
 .PHONY : src/entities/Item.cpp.s
@@ -286,6 +382,7 @@ src/executables/backTracking-main.o: src/executables/backTracking-main.cpp.o
 
 # target to build an object file
 src/executables/backTracking-main.cpp.o:
+	$(MAKE) -f CMakeFiles/backtracking-main-time.dir/build.make CMakeFiles/backtracking-main-time.dir/src/executables/backTracking-main.cpp.o
 	$(MAKE) -f CMakeFiles/backtracking-main.dir/build.make CMakeFiles/backtracking-main.dir/src/executables/backTracking-main.cpp.o
 .PHONY : src/executables/backTracking-main.cpp.o
 
@@ -295,6 +392,7 @@ src/executables/backTracking-main.i: src/executables/backTracking-main.cpp.i
 
 # target to preprocess a source file
 src/executables/backTracking-main.cpp.i:
+	$(MAKE) -f CMakeFiles/backtracking-main-time.dir/build.make CMakeFiles/backtracking-main-time.dir/src/executables/backTracking-main.cpp.i
 	$(MAKE) -f CMakeFiles/backtracking-main.dir/build.make CMakeFiles/backtracking-main.dir/src/executables/backTracking-main.cpp.i
 .PHONY : src/executables/backTracking-main.cpp.i
 
@@ -304,8 +402,39 @@ src/executables/backTracking-main.s: src/executables/backTracking-main.cpp.s
 
 # target to generate assembly for a file
 src/executables/backTracking-main.cpp.s:
+	$(MAKE) -f CMakeFiles/backtracking-main-time.dir/build.make CMakeFiles/backtracking-main-time.dir/src/executables/backTracking-main.cpp.s
 	$(MAKE) -f CMakeFiles/backtracking-main.dir/build.make CMakeFiles/backtracking-main.dir/src/executables/backTracking-main.cpp.s
 .PHONY : src/executables/backTracking-main.cpp.s
+
+src/executables/bottom_up-main.o: src/executables/bottom_up-main.cpp.o
+
+.PHONY : src/executables/bottom_up-main.o
+
+# target to build an object file
+src/executables/bottom_up-main.cpp.o:
+	$(MAKE) -f CMakeFiles/bottom_up-main-time.dir/build.make CMakeFiles/bottom_up-main-time.dir/src/executables/bottom_up-main.cpp.o
+	$(MAKE) -f CMakeFiles/bottom_up-main.dir/build.make CMakeFiles/bottom_up-main.dir/src/executables/bottom_up-main.cpp.o
+.PHONY : src/executables/bottom_up-main.cpp.o
+
+src/executables/bottom_up-main.i: src/executables/bottom_up-main.cpp.i
+
+.PHONY : src/executables/bottom_up-main.i
+
+# target to preprocess a source file
+src/executables/bottom_up-main.cpp.i:
+	$(MAKE) -f CMakeFiles/bottom_up-main-time.dir/build.make CMakeFiles/bottom_up-main-time.dir/src/executables/bottom_up-main.cpp.i
+	$(MAKE) -f CMakeFiles/bottom_up-main.dir/build.make CMakeFiles/bottom_up-main.dir/src/executables/bottom_up-main.cpp.i
+.PHONY : src/executables/bottom_up-main.cpp.i
+
+src/executables/bottom_up-main.s: src/executables/bottom_up-main.cpp.s
+
+.PHONY : src/executables/bottom_up-main.s
+
+# target to generate assembly for a file
+src/executables/bottom_up-main.cpp.s:
+	$(MAKE) -f CMakeFiles/bottom_up-main-time.dir/build.make CMakeFiles/bottom_up-main-time.dir/src/executables/bottom_up-main.cpp.s
+	$(MAKE) -f CMakeFiles/bottom_up-main.dir/build.make CMakeFiles/bottom_up-main.dir/src/executables/bottom_up-main.cpp.s
+.PHONY : src/executables/bottom_up-main.cpp.s
 
 src/executables/bruteForce-main.o: src/executables/bruteForce-main.cpp.o
 
@@ -313,6 +442,7 @@ src/executables/bruteForce-main.o: src/executables/bruteForce-main.cpp.o
 
 # target to build an object file
 src/executables/bruteForce-main.cpp.o:
+	$(MAKE) -f CMakeFiles/bruteforce-main-time.dir/build.make CMakeFiles/bruteforce-main-time.dir/src/executables/bruteForce-main.cpp.o
 	$(MAKE) -f CMakeFiles/bruteforce-main.dir/build.make CMakeFiles/bruteforce-main.dir/src/executables/bruteForce-main.cpp.o
 .PHONY : src/executables/bruteForce-main.cpp.o
 
@@ -322,6 +452,7 @@ src/executables/bruteForce-main.i: src/executables/bruteForce-main.cpp.i
 
 # target to preprocess a source file
 src/executables/bruteForce-main.cpp.i:
+	$(MAKE) -f CMakeFiles/bruteforce-main-time.dir/build.make CMakeFiles/bruteforce-main-time.dir/src/executables/bruteForce-main.cpp.i
 	$(MAKE) -f CMakeFiles/bruteforce-main.dir/build.make CMakeFiles/bruteforce-main.dir/src/executables/bruteForce-main.cpp.i
 .PHONY : src/executables/bruteForce-main.cpp.i
 
@@ -331,8 +462,39 @@ src/executables/bruteForce-main.s: src/executables/bruteForce-main.cpp.s
 
 # target to generate assembly for a file
 src/executables/bruteForce-main.cpp.s:
+	$(MAKE) -f CMakeFiles/bruteforce-main-time.dir/build.make CMakeFiles/bruteforce-main-time.dir/src/executables/bruteForce-main.cpp.s
 	$(MAKE) -f CMakeFiles/bruteforce-main.dir/build.make CMakeFiles/bruteforce-main.dir/src/executables/bruteForce-main.cpp.s
 .PHONY : src/executables/bruteForce-main.cpp.s
+
+src/executables/top_down-main.o: src/executables/top_down-main.cpp.o
+
+.PHONY : src/executables/top_down-main.o
+
+# target to build an object file
+src/executables/top_down-main.cpp.o:
+	$(MAKE) -f CMakeFiles/top_down-main-time.dir/build.make CMakeFiles/top_down-main-time.dir/src/executables/top_down-main.cpp.o
+	$(MAKE) -f CMakeFiles/top_down-main.dir/build.make CMakeFiles/top_down-main.dir/src/executables/top_down-main.cpp.o
+.PHONY : src/executables/top_down-main.cpp.o
+
+src/executables/top_down-main.i: src/executables/top_down-main.cpp.i
+
+.PHONY : src/executables/top_down-main.i
+
+# target to preprocess a source file
+src/executables/top_down-main.cpp.i:
+	$(MAKE) -f CMakeFiles/top_down-main-time.dir/build.make CMakeFiles/top_down-main-time.dir/src/executables/top_down-main.cpp.i
+	$(MAKE) -f CMakeFiles/top_down-main.dir/build.make CMakeFiles/top_down-main.dir/src/executables/top_down-main.cpp.i
+.PHONY : src/executables/top_down-main.cpp.i
+
+src/executables/top_down-main.s: src/executables/top_down-main.cpp.s
+
+.PHONY : src/executables/top_down-main.s
+
+# target to generate assembly for a file
+src/executables/top_down-main.cpp.s:
+	$(MAKE) -f CMakeFiles/top_down-main-time.dir/build.make CMakeFiles/top_down-main-time.dir/src/executables/top_down-main.cpp.s
+	$(MAKE) -f CMakeFiles/top_down-main.dir/build.make CMakeFiles/top_down-main.dir/src/executables/top_down-main.cpp.s
+.PHONY : src/executables/top_down-main.cpp.s
 
 src/solutions/BackTracking.o: src/solutions/BackTracking.cpp.o
 
@@ -340,7 +502,14 @@ src/solutions/BackTracking.o: src/solutions/BackTracking.cpp.o
 
 # target to build an object file
 src/solutions/BackTracking.cpp.o:
+	$(MAKE) -f CMakeFiles/top_down-main-time.dir/build.make CMakeFiles/top_down-main-time.dir/src/solutions/BackTracking.cpp.o
+	$(MAKE) -f CMakeFiles/bottom_up-main-time.dir/build.make CMakeFiles/bottom_up-main-time.dir/src/solutions/BackTracking.cpp.o
+	$(MAKE) -f CMakeFiles/backtracking-main-time.dir/build.make CMakeFiles/backtracking-main-time.dir/src/solutions/BackTracking.cpp.o
+	$(MAKE) -f CMakeFiles/bruteforce-main-time.dir/build.make CMakeFiles/bruteforce-main-time.dir/src/solutions/BackTracking.cpp.o
+	$(MAKE) -f CMakeFiles/bottom_up-main.dir/build.make CMakeFiles/bottom_up-main.dir/src/solutions/BackTracking.cpp.o
 	$(MAKE) -f CMakeFiles/backtracking-main.dir/build.make CMakeFiles/backtracking-main.dir/src/solutions/BackTracking.cpp.o
+	$(MAKE) -f CMakeFiles/top_down-main.dir/build.make CMakeFiles/top_down-main.dir/src/solutions/BackTracking.cpp.o
+	$(MAKE) -f CMakeFiles/bruteforce-main.dir/build.make CMakeFiles/bruteforce-main.dir/src/solutions/BackTracking.cpp.o
 	$(MAKE) -f CMakeFiles/run_test.dir/build.make CMakeFiles/run_test.dir/src/solutions/BackTracking.cpp.o
 .PHONY : src/solutions/BackTracking.cpp.o
 
@@ -350,7 +519,14 @@ src/solutions/BackTracking.i: src/solutions/BackTracking.cpp.i
 
 # target to preprocess a source file
 src/solutions/BackTracking.cpp.i:
+	$(MAKE) -f CMakeFiles/top_down-main-time.dir/build.make CMakeFiles/top_down-main-time.dir/src/solutions/BackTracking.cpp.i
+	$(MAKE) -f CMakeFiles/bottom_up-main-time.dir/build.make CMakeFiles/bottom_up-main-time.dir/src/solutions/BackTracking.cpp.i
+	$(MAKE) -f CMakeFiles/backtracking-main-time.dir/build.make CMakeFiles/backtracking-main-time.dir/src/solutions/BackTracking.cpp.i
+	$(MAKE) -f CMakeFiles/bruteforce-main-time.dir/build.make CMakeFiles/bruteforce-main-time.dir/src/solutions/BackTracking.cpp.i
+	$(MAKE) -f CMakeFiles/bottom_up-main.dir/build.make CMakeFiles/bottom_up-main.dir/src/solutions/BackTracking.cpp.i
 	$(MAKE) -f CMakeFiles/backtracking-main.dir/build.make CMakeFiles/backtracking-main.dir/src/solutions/BackTracking.cpp.i
+	$(MAKE) -f CMakeFiles/top_down-main.dir/build.make CMakeFiles/top_down-main.dir/src/solutions/BackTracking.cpp.i
+	$(MAKE) -f CMakeFiles/bruteforce-main.dir/build.make CMakeFiles/bruteforce-main.dir/src/solutions/BackTracking.cpp.i
 	$(MAKE) -f CMakeFiles/run_test.dir/build.make CMakeFiles/run_test.dir/src/solutions/BackTracking.cpp.i
 .PHONY : src/solutions/BackTracking.cpp.i
 
@@ -360,7 +536,14 @@ src/solutions/BackTracking.s: src/solutions/BackTracking.cpp.s
 
 # target to generate assembly for a file
 src/solutions/BackTracking.cpp.s:
+	$(MAKE) -f CMakeFiles/top_down-main-time.dir/build.make CMakeFiles/top_down-main-time.dir/src/solutions/BackTracking.cpp.s
+	$(MAKE) -f CMakeFiles/bottom_up-main-time.dir/build.make CMakeFiles/bottom_up-main-time.dir/src/solutions/BackTracking.cpp.s
+	$(MAKE) -f CMakeFiles/backtracking-main-time.dir/build.make CMakeFiles/backtracking-main-time.dir/src/solutions/BackTracking.cpp.s
+	$(MAKE) -f CMakeFiles/bruteforce-main-time.dir/build.make CMakeFiles/bruteforce-main-time.dir/src/solutions/BackTracking.cpp.s
+	$(MAKE) -f CMakeFiles/bottom_up-main.dir/build.make CMakeFiles/bottom_up-main.dir/src/solutions/BackTracking.cpp.s
 	$(MAKE) -f CMakeFiles/backtracking-main.dir/build.make CMakeFiles/backtracking-main.dir/src/solutions/BackTracking.cpp.s
+	$(MAKE) -f CMakeFiles/top_down-main.dir/build.make CMakeFiles/top_down-main.dir/src/solutions/BackTracking.cpp.s
+	$(MAKE) -f CMakeFiles/bruteforce-main.dir/build.make CMakeFiles/bruteforce-main.dir/src/solutions/BackTracking.cpp.s
 	$(MAKE) -f CMakeFiles/run_test.dir/build.make CMakeFiles/run_test.dir/src/solutions/BackTracking.cpp.s
 .PHONY : src/solutions/BackTracking.cpp.s
 
@@ -370,6 +553,13 @@ src/solutions/BruteForce.o: src/solutions/BruteForce.cpp.o
 
 # target to build an object file
 src/solutions/BruteForce.cpp.o:
+	$(MAKE) -f CMakeFiles/top_down-main-time.dir/build.make CMakeFiles/top_down-main-time.dir/src/solutions/BruteForce.cpp.o
+	$(MAKE) -f CMakeFiles/bottom_up-main-time.dir/build.make CMakeFiles/bottom_up-main-time.dir/src/solutions/BruteForce.cpp.o
+	$(MAKE) -f CMakeFiles/backtracking-main-time.dir/build.make CMakeFiles/backtracking-main-time.dir/src/solutions/BruteForce.cpp.o
+	$(MAKE) -f CMakeFiles/bruteforce-main-time.dir/build.make CMakeFiles/bruteforce-main-time.dir/src/solutions/BruteForce.cpp.o
+	$(MAKE) -f CMakeFiles/bottom_up-main.dir/build.make CMakeFiles/bottom_up-main.dir/src/solutions/BruteForce.cpp.o
+	$(MAKE) -f CMakeFiles/backtracking-main.dir/build.make CMakeFiles/backtracking-main.dir/src/solutions/BruteForce.cpp.o
+	$(MAKE) -f CMakeFiles/top_down-main.dir/build.make CMakeFiles/top_down-main.dir/src/solutions/BruteForce.cpp.o
 	$(MAKE) -f CMakeFiles/bruteforce-main.dir/build.make CMakeFiles/bruteforce-main.dir/src/solutions/BruteForce.cpp.o
 	$(MAKE) -f CMakeFiles/run_test.dir/build.make CMakeFiles/run_test.dir/src/solutions/BruteForce.cpp.o
 .PHONY : src/solutions/BruteForce.cpp.o
@@ -380,6 +570,13 @@ src/solutions/BruteForce.i: src/solutions/BruteForce.cpp.i
 
 # target to preprocess a source file
 src/solutions/BruteForce.cpp.i:
+	$(MAKE) -f CMakeFiles/top_down-main-time.dir/build.make CMakeFiles/top_down-main-time.dir/src/solutions/BruteForce.cpp.i
+	$(MAKE) -f CMakeFiles/bottom_up-main-time.dir/build.make CMakeFiles/bottom_up-main-time.dir/src/solutions/BruteForce.cpp.i
+	$(MAKE) -f CMakeFiles/backtracking-main-time.dir/build.make CMakeFiles/backtracking-main-time.dir/src/solutions/BruteForce.cpp.i
+	$(MAKE) -f CMakeFiles/bruteforce-main-time.dir/build.make CMakeFiles/bruteforce-main-time.dir/src/solutions/BruteForce.cpp.i
+	$(MAKE) -f CMakeFiles/bottom_up-main.dir/build.make CMakeFiles/bottom_up-main.dir/src/solutions/BruteForce.cpp.i
+	$(MAKE) -f CMakeFiles/backtracking-main.dir/build.make CMakeFiles/backtracking-main.dir/src/solutions/BruteForce.cpp.i
+	$(MAKE) -f CMakeFiles/top_down-main.dir/build.make CMakeFiles/top_down-main.dir/src/solutions/BruteForce.cpp.i
 	$(MAKE) -f CMakeFiles/bruteforce-main.dir/build.make CMakeFiles/bruteforce-main.dir/src/solutions/BruteForce.cpp.i
 	$(MAKE) -f CMakeFiles/run_test.dir/build.make CMakeFiles/run_test.dir/src/solutions/BruteForce.cpp.i
 .PHONY : src/solutions/BruteForce.cpp.i
@@ -390,9 +587,118 @@ src/solutions/BruteForce.s: src/solutions/BruteForce.cpp.s
 
 # target to generate assembly for a file
 src/solutions/BruteForce.cpp.s:
+	$(MAKE) -f CMakeFiles/top_down-main-time.dir/build.make CMakeFiles/top_down-main-time.dir/src/solutions/BruteForce.cpp.s
+	$(MAKE) -f CMakeFiles/bottom_up-main-time.dir/build.make CMakeFiles/bottom_up-main-time.dir/src/solutions/BruteForce.cpp.s
+	$(MAKE) -f CMakeFiles/backtracking-main-time.dir/build.make CMakeFiles/backtracking-main-time.dir/src/solutions/BruteForce.cpp.s
+	$(MAKE) -f CMakeFiles/bruteforce-main-time.dir/build.make CMakeFiles/bruteforce-main-time.dir/src/solutions/BruteForce.cpp.s
+	$(MAKE) -f CMakeFiles/bottom_up-main.dir/build.make CMakeFiles/bottom_up-main.dir/src/solutions/BruteForce.cpp.s
+	$(MAKE) -f CMakeFiles/backtracking-main.dir/build.make CMakeFiles/backtracking-main.dir/src/solutions/BruteForce.cpp.s
+	$(MAKE) -f CMakeFiles/top_down-main.dir/build.make CMakeFiles/top_down-main.dir/src/solutions/BruteForce.cpp.s
 	$(MAKE) -f CMakeFiles/bruteforce-main.dir/build.make CMakeFiles/bruteforce-main.dir/src/solutions/BruteForce.cpp.s
 	$(MAKE) -f CMakeFiles/run_test.dir/build.make CMakeFiles/run_test.dir/src/solutions/BruteForce.cpp.s
 .PHONY : src/solutions/BruteForce.cpp.s
+
+src/solutions/DinamicProgrammingBottomUp.o: src/solutions/DinamicProgrammingBottomUp.cpp.o
+
+.PHONY : src/solutions/DinamicProgrammingBottomUp.o
+
+# target to build an object file
+src/solutions/DinamicProgrammingBottomUp.cpp.o:
+	$(MAKE) -f CMakeFiles/top_down-main-time.dir/build.make CMakeFiles/top_down-main-time.dir/src/solutions/DinamicProgrammingBottomUp.cpp.o
+	$(MAKE) -f CMakeFiles/bottom_up-main-time.dir/build.make CMakeFiles/bottom_up-main-time.dir/src/solutions/DinamicProgrammingBottomUp.cpp.o
+	$(MAKE) -f CMakeFiles/backtracking-main-time.dir/build.make CMakeFiles/backtracking-main-time.dir/src/solutions/DinamicProgrammingBottomUp.cpp.o
+	$(MAKE) -f CMakeFiles/bruteforce-main-time.dir/build.make CMakeFiles/bruteforce-main-time.dir/src/solutions/DinamicProgrammingBottomUp.cpp.o
+	$(MAKE) -f CMakeFiles/bottom_up-main.dir/build.make CMakeFiles/bottom_up-main.dir/src/solutions/DinamicProgrammingBottomUp.cpp.o
+	$(MAKE) -f CMakeFiles/backtracking-main.dir/build.make CMakeFiles/backtracking-main.dir/src/solutions/DinamicProgrammingBottomUp.cpp.o
+	$(MAKE) -f CMakeFiles/top_down-main.dir/build.make CMakeFiles/top_down-main.dir/src/solutions/DinamicProgrammingBottomUp.cpp.o
+	$(MAKE) -f CMakeFiles/bruteforce-main.dir/build.make CMakeFiles/bruteforce-main.dir/src/solutions/DinamicProgrammingBottomUp.cpp.o
+	$(MAKE) -f CMakeFiles/run_test.dir/build.make CMakeFiles/run_test.dir/src/solutions/DinamicProgrammingBottomUp.cpp.o
+.PHONY : src/solutions/DinamicProgrammingBottomUp.cpp.o
+
+src/solutions/DinamicProgrammingBottomUp.i: src/solutions/DinamicProgrammingBottomUp.cpp.i
+
+.PHONY : src/solutions/DinamicProgrammingBottomUp.i
+
+# target to preprocess a source file
+src/solutions/DinamicProgrammingBottomUp.cpp.i:
+	$(MAKE) -f CMakeFiles/top_down-main-time.dir/build.make CMakeFiles/top_down-main-time.dir/src/solutions/DinamicProgrammingBottomUp.cpp.i
+	$(MAKE) -f CMakeFiles/bottom_up-main-time.dir/build.make CMakeFiles/bottom_up-main-time.dir/src/solutions/DinamicProgrammingBottomUp.cpp.i
+	$(MAKE) -f CMakeFiles/backtracking-main-time.dir/build.make CMakeFiles/backtracking-main-time.dir/src/solutions/DinamicProgrammingBottomUp.cpp.i
+	$(MAKE) -f CMakeFiles/bruteforce-main-time.dir/build.make CMakeFiles/bruteforce-main-time.dir/src/solutions/DinamicProgrammingBottomUp.cpp.i
+	$(MAKE) -f CMakeFiles/bottom_up-main.dir/build.make CMakeFiles/bottom_up-main.dir/src/solutions/DinamicProgrammingBottomUp.cpp.i
+	$(MAKE) -f CMakeFiles/backtracking-main.dir/build.make CMakeFiles/backtracking-main.dir/src/solutions/DinamicProgrammingBottomUp.cpp.i
+	$(MAKE) -f CMakeFiles/top_down-main.dir/build.make CMakeFiles/top_down-main.dir/src/solutions/DinamicProgrammingBottomUp.cpp.i
+	$(MAKE) -f CMakeFiles/bruteforce-main.dir/build.make CMakeFiles/bruteforce-main.dir/src/solutions/DinamicProgrammingBottomUp.cpp.i
+	$(MAKE) -f CMakeFiles/run_test.dir/build.make CMakeFiles/run_test.dir/src/solutions/DinamicProgrammingBottomUp.cpp.i
+.PHONY : src/solutions/DinamicProgrammingBottomUp.cpp.i
+
+src/solutions/DinamicProgrammingBottomUp.s: src/solutions/DinamicProgrammingBottomUp.cpp.s
+
+.PHONY : src/solutions/DinamicProgrammingBottomUp.s
+
+# target to generate assembly for a file
+src/solutions/DinamicProgrammingBottomUp.cpp.s:
+	$(MAKE) -f CMakeFiles/top_down-main-time.dir/build.make CMakeFiles/top_down-main-time.dir/src/solutions/DinamicProgrammingBottomUp.cpp.s
+	$(MAKE) -f CMakeFiles/bottom_up-main-time.dir/build.make CMakeFiles/bottom_up-main-time.dir/src/solutions/DinamicProgrammingBottomUp.cpp.s
+	$(MAKE) -f CMakeFiles/backtracking-main-time.dir/build.make CMakeFiles/backtracking-main-time.dir/src/solutions/DinamicProgrammingBottomUp.cpp.s
+	$(MAKE) -f CMakeFiles/bruteforce-main-time.dir/build.make CMakeFiles/bruteforce-main-time.dir/src/solutions/DinamicProgrammingBottomUp.cpp.s
+	$(MAKE) -f CMakeFiles/bottom_up-main.dir/build.make CMakeFiles/bottom_up-main.dir/src/solutions/DinamicProgrammingBottomUp.cpp.s
+	$(MAKE) -f CMakeFiles/backtracking-main.dir/build.make CMakeFiles/backtracking-main.dir/src/solutions/DinamicProgrammingBottomUp.cpp.s
+	$(MAKE) -f CMakeFiles/top_down-main.dir/build.make CMakeFiles/top_down-main.dir/src/solutions/DinamicProgrammingBottomUp.cpp.s
+	$(MAKE) -f CMakeFiles/bruteforce-main.dir/build.make CMakeFiles/bruteforce-main.dir/src/solutions/DinamicProgrammingBottomUp.cpp.s
+	$(MAKE) -f CMakeFiles/run_test.dir/build.make CMakeFiles/run_test.dir/src/solutions/DinamicProgrammingBottomUp.cpp.s
+.PHONY : src/solutions/DinamicProgrammingBottomUp.cpp.s
+
+src/solutions/DinamicProgrammingTopDown.o: src/solutions/DinamicProgrammingTopDown.cpp.o
+
+.PHONY : src/solutions/DinamicProgrammingTopDown.o
+
+# target to build an object file
+src/solutions/DinamicProgrammingTopDown.cpp.o:
+	$(MAKE) -f CMakeFiles/top_down-main-time.dir/build.make CMakeFiles/top_down-main-time.dir/src/solutions/DinamicProgrammingTopDown.cpp.o
+	$(MAKE) -f CMakeFiles/bottom_up-main-time.dir/build.make CMakeFiles/bottom_up-main-time.dir/src/solutions/DinamicProgrammingTopDown.cpp.o
+	$(MAKE) -f CMakeFiles/backtracking-main-time.dir/build.make CMakeFiles/backtracking-main-time.dir/src/solutions/DinamicProgrammingTopDown.cpp.o
+	$(MAKE) -f CMakeFiles/bruteforce-main-time.dir/build.make CMakeFiles/bruteforce-main-time.dir/src/solutions/DinamicProgrammingTopDown.cpp.o
+	$(MAKE) -f CMakeFiles/bottom_up-main.dir/build.make CMakeFiles/bottom_up-main.dir/src/solutions/DinamicProgrammingTopDown.cpp.o
+	$(MAKE) -f CMakeFiles/backtracking-main.dir/build.make CMakeFiles/backtracking-main.dir/src/solutions/DinamicProgrammingTopDown.cpp.o
+	$(MAKE) -f CMakeFiles/top_down-main.dir/build.make CMakeFiles/top_down-main.dir/src/solutions/DinamicProgrammingTopDown.cpp.o
+	$(MAKE) -f CMakeFiles/bruteforce-main.dir/build.make CMakeFiles/bruteforce-main.dir/src/solutions/DinamicProgrammingTopDown.cpp.o
+	$(MAKE) -f CMakeFiles/run_test.dir/build.make CMakeFiles/run_test.dir/src/solutions/DinamicProgrammingTopDown.cpp.o
+.PHONY : src/solutions/DinamicProgrammingTopDown.cpp.o
+
+src/solutions/DinamicProgrammingTopDown.i: src/solutions/DinamicProgrammingTopDown.cpp.i
+
+.PHONY : src/solutions/DinamicProgrammingTopDown.i
+
+# target to preprocess a source file
+src/solutions/DinamicProgrammingTopDown.cpp.i:
+	$(MAKE) -f CMakeFiles/top_down-main-time.dir/build.make CMakeFiles/top_down-main-time.dir/src/solutions/DinamicProgrammingTopDown.cpp.i
+	$(MAKE) -f CMakeFiles/bottom_up-main-time.dir/build.make CMakeFiles/bottom_up-main-time.dir/src/solutions/DinamicProgrammingTopDown.cpp.i
+	$(MAKE) -f CMakeFiles/backtracking-main-time.dir/build.make CMakeFiles/backtracking-main-time.dir/src/solutions/DinamicProgrammingTopDown.cpp.i
+	$(MAKE) -f CMakeFiles/bruteforce-main-time.dir/build.make CMakeFiles/bruteforce-main-time.dir/src/solutions/DinamicProgrammingTopDown.cpp.i
+	$(MAKE) -f CMakeFiles/bottom_up-main.dir/build.make CMakeFiles/bottom_up-main.dir/src/solutions/DinamicProgrammingTopDown.cpp.i
+	$(MAKE) -f CMakeFiles/backtracking-main.dir/build.make CMakeFiles/backtracking-main.dir/src/solutions/DinamicProgrammingTopDown.cpp.i
+	$(MAKE) -f CMakeFiles/top_down-main.dir/build.make CMakeFiles/top_down-main.dir/src/solutions/DinamicProgrammingTopDown.cpp.i
+	$(MAKE) -f CMakeFiles/bruteforce-main.dir/build.make CMakeFiles/bruteforce-main.dir/src/solutions/DinamicProgrammingTopDown.cpp.i
+	$(MAKE) -f CMakeFiles/run_test.dir/build.make CMakeFiles/run_test.dir/src/solutions/DinamicProgrammingTopDown.cpp.i
+.PHONY : src/solutions/DinamicProgrammingTopDown.cpp.i
+
+src/solutions/DinamicProgrammingTopDown.s: src/solutions/DinamicProgrammingTopDown.cpp.s
+
+.PHONY : src/solutions/DinamicProgrammingTopDown.s
+
+# target to generate assembly for a file
+src/solutions/DinamicProgrammingTopDown.cpp.s:
+	$(MAKE) -f CMakeFiles/top_down-main-time.dir/build.make CMakeFiles/top_down-main-time.dir/src/solutions/DinamicProgrammingTopDown.cpp.s
+	$(MAKE) -f CMakeFiles/bottom_up-main-time.dir/build.make CMakeFiles/bottom_up-main-time.dir/src/solutions/DinamicProgrammingTopDown.cpp.s
+	$(MAKE) -f CMakeFiles/backtracking-main-time.dir/build.make CMakeFiles/backtracking-main-time.dir/src/solutions/DinamicProgrammingTopDown.cpp.s
+	$(MAKE) -f CMakeFiles/bruteforce-main-time.dir/build.make CMakeFiles/bruteforce-main-time.dir/src/solutions/DinamicProgrammingTopDown.cpp.s
+	$(MAKE) -f CMakeFiles/bottom_up-main.dir/build.make CMakeFiles/bottom_up-main.dir/src/solutions/DinamicProgrammingTopDown.cpp.s
+	$(MAKE) -f CMakeFiles/backtracking-main.dir/build.make CMakeFiles/backtracking-main.dir/src/solutions/DinamicProgrammingTopDown.cpp.s
+	$(MAKE) -f CMakeFiles/top_down-main.dir/build.make CMakeFiles/top_down-main.dir/src/solutions/DinamicProgrammingTopDown.cpp.s
+	$(MAKE) -f CMakeFiles/bruteforce-main.dir/build.make CMakeFiles/bruteforce-main.dir/src/solutions/DinamicProgrammingTopDown.cpp.s
+	$(MAKE) -f CMakeFiles/run_test.dir/build.make CMakeFiles/run_test.dir/src/solutions/DinamicProgrammingTopDown.cpp.s
+.PHONY : src/solutions/DinamicProgrammingTopDown.cpp.s
 
 src/solutions/KnapSack.o: src/solutions/KnapSack.cpp.o
 
@@ -400,7 +706,13 @@ src/solutions/KnapSack.o: src/solutions/KnapSack.cpp.o
 
 # target to build an object file
 src/solutions/KnapSack.cpp.o:
+	$(MAKE) -f CMakeFiles/top_down-main-time.dir/build.make CMakeFiles/top_down-main-time.dir/src/solutions/KnapSack.cpp.o
+	$(MAKE) -f CMakeFiles/bottom_up-main-time.dir/build.make CMakeFiles/bottom_up-main-time.dir/src/solutions/KnapSack.cpp.o
+	$(MAKE) -f CMakeFiles/backtracking-main-time.dir/build.make CMakeFiles/backtracking-main-time.dir/src/solutions/KnapSack.cpp.o
+	$(MAKE) -f CMakeFiles/bruteforce-main-time.dir/build.make CMakeFiles/bruteforce-main-time.dir/src/solutions/KnapSack.cpp.o
+	$(MAKE) -f CMakeFiles/bottom_up-main.dir/build.make CMakeFiles/bottom_up-main.dir/src/solutions/KnapSack.cpp.o
 	$(MAKE) -f CMakeFiles/backtracking-main.dir/build.make CMakeFiles/backtracking-main.dir/src/solutions/KnapSack.cpp.o
+	$(MAKE) -f CMakeFiles/top_down-main.dir/build.make CMakeFiles/top_down-main.dir/src/solutions/KnapSack.cpp.o
 	$(MAKE) -f CMakeFiles/bruteforce-main.dir/build.make CMakeFiles/bruteforce-main.dir/src/solutions/KnapSack.cpp.o
 	$(MAKE) -f CMakeFiles/run_test.dir/build.make CMakeFiles/run_test.dir/src/solutions/KnapSack.cpp.o
 .PHONY : src/solutions/KnapSack.cpp.o
@@ -411,7 +723,13 @@ src/solutions/KnapSack.i: src/solutions/KnapSack.cpp.i
 
 # target to preprocess a source file
 src/solutions/KnapSack.cpp.i:
+	$(MAKE) -f CMakeFiles/top_down-main-time.dir/build.make CMakeFiles/top_down-main-time.dir/src/solutions/KnapSack.cpp.i
+	$(MAKE) -f CMakeFiles/bottom_up-main-time.dir/build.make CMakeFiles/bottom_up-main-time.dir/src/solutions/KnapSack.cpp.i
+	$(MAKE) -f CMakeFiles/backtracking-main-time.dir/build.make CMakeFiles/backtracking-main-time.dir/src/solutions/KnapSack.cpp.i
+	$(MAKE) -f CMakeFiles/bruteforce-main-time.dir/build.make CMakeFiles/bruteforce-main-time.dir/src/solutions/KnapSack.cpp.i
+	$(MAKE) -f CMakeFiles/bottom_up-main.dir/build.make CMakeFiles/bottom_up-main.dir/src/solutions/KnapSack.cpp.i
 	$(MAKE) -f CMakeFiles/backtracking-main.dir/build.make CMakeFiles/backtracking-main.dir/src/solutions/KnapSack.cpp.i
+	$(MAKE) -f CMakeFiles/top_down-main.dir/build.make CMakeFiles/top_down-main.dir/src/solutions/KnapSack.cpp.i
 	$(MAKE) -f CMakeFiles/bruteforce-main.dir/build.make CMakeFiles/bruteforce-main.dir/src/solutions/KnapSack.cpp.i
 	$(MAKE) -f CMakeFiles/run_test.dir/build.make CMakeFiles/run_test.dir/src/solutions/KnapSack.cpp.i
 .PHONY : src/solutions/KnapSack.cpp.i
@@ -422,37 +740,43 @@ src/solutions/KnapSack.s: src/solutions/KnapSack.cpp.s
 
 # target to generate assembly for a file
 src/solutions/KnapSack.cpp.s:
+	$(MAKE) -f CMakeFiles/top_down-main-time.dir/build.make CMakeFiles/top_down-main-time.dir/src/solutions/KnapSack.cpp.s
+	$(MAKE) -f CMakeFiles/bottom_up-main-time.dir/build.make CMakeFiles/bottom_up-main-time.dir/src/solutions/KnapSack.cpp.s
+	$(MAKE) -f CMakeFiles/backtracking-main-time.dir/build.make CMakeFiles/backtracking-main-time.dir/src/solutions/KnapSack.cpp.s
+	$(MAKE) -f CMakeFiles/bruteforce-main-time.dir/build.make CMakeFiles/bruteforce-main-time.dir/src/solutions/KnapSack.cpp.s
+	$(MAKE) -f CMakeFiles/bottom_up-main.dir/build.make CMakeFiles/bottom_up-main.dir/src/solutions/KnapSack.cpp.s
 	$(MAKE) -f CMakeFiles/backtracking-main.dir/build.make CMakeFiles/backtracking-main.dir/src/solutions/KnapSack.cpp.s
+	$(MAKE) -f CMakeFiles/top_down-main.dir/build.make CMakeFiles/top_down-main.dir/src/solutions/KnapSack.cpp.s
 	$(MAKE) -f CMakeFiles/bruteforce-main.dir/build.make CMakeFiles/bruteforce-main.dir/src/solutions/KnapSack.cpp.s
 	$(MAKE) -f CMakeFiles/run_test.dir/build.make CMakeFiles/run_test.dir/src/solutions/KnapSack.cpp.s
 .PHONY : src/solutions/KnapSack.cpp.s
 
-test/solutions/BruteForceTest.o: test/solutions/BruteForceTest.cpp.o
+test/solutions/KnapSackTest.o: test/solutions/KnapSackTest.cpp.o
 
-.PHONY : test/solutions/BruteForceTest.o
+.PHONY : test/solutions/KnapSackTest.o
 
 # target to build an object file
-test/solutions/BruteForceTest.cpp.o:
-	$(MAKE) -f CMakeFiles/run_test.dir/build.make CMakeFiles/run_test.dir/test/solutions/BruteForceTest.cpp.o
-.PHONY : test/solutions/BruteForceTest.cpp.o
+test/solutions/KnapSackTest.cpp.o:
+	$(MAKE) -f CMakeFiles/run_test.dir/build.make CMakeFiles/run_test.dir/test/solutions/KnapSackTest.cpp.o
+.PHONY : test/solutions/KnapSackTest.cpp.o
 
-test/solutions/BruteForceTest.i: test/solutions/BruteForceTest.cpp.i
+test/solutions/KnapSackTest.i: test/solutions/KnapSackTest.cpp.i
 
-.PHONY : test/solutions/BruteForceTest.i
+.PHONY : test/solutions/KnapSackTest.i
 
 # target to preprocess a source file
-test/solutions/BruteForceTest.cpp.i:
-	$(MAKE) -f CMakeFiles/run_test.dir/build.make CMakeFiles/run_test.dir/test/solutions/BruteForceTest.cpp.i
-.PHONY : test/solutions/BruteForceTest.cpp.i
+test/solutions/KnapSackTest.cpp.i:
+	$(MAKE) -f CMakeFiles/run_test.dir/build.make CMakeFiles/run_test.dir/test/solutions/KnapSackTest.cpp.i
+.PHONY : test/solutions/KnapSackTest.cpp.i
 
-test/solutions/BruteForceTest.s: test/solutions/BruteForceTest.cpp.s
+test/solutions/KnapSackTest.s: test/solutions/KnapSackTest.cpp.s
 
-.PHONY : test/solutions/BruteForceTest.s
+.PHONY : test/solutions/KnapSackTest.s
 
 # target to generate assembly for a file
-test/solutions/BruteForceTest.cpp.s:
-	$(MAKE) -f CMakeFiles/run_test.dir/build.make CMakeFiles/run_test.dir/test/solutions/BruteForceTest.cpp.s
-.PHONY : test/solutions/BruteForceTest.cpp.s
+test/solutions/KnapSackTest.cpp.s:
+	$(MAKE) -f CMakeFiles/run_test.dir/build.make CMakeFiles/run_test.dir/test/solutions/KnapSackTest.cpp.s
+.PHONY : test/solutions/KnapSackTest.cpp.s
 
 # Help Target
 help:
@@ -461,13 +785,19 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... install"
-	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... list_install_components"
-	@echo "... backtracking-main"
-	@echo "... bruteforce-main"
 	@echo "... install/local"
+	@echo "... list_install_components"
+	@echo "... edit_cache"
+	@echo "... top_down-main-time"
+	@echo "... bottom_up-main-time"
+	@echo "... rebuild_cache"
+	@echo "... backtracking-main-time"
+	@echo "... bruteforce-main-time"
+	@echo "... bottom_up-main"
+	@echo "... backtracking-main"
+	@echo "... top_down-main"
+	@echo "... install"
+	@echo "... bruteforce-main"
 	@echo "... run_test"
 	@echo "... gmock"
 	@echo "... gmock_main"
@@ -479,21 +809,33 @@ help:
 	@echo "... src/executables/backTracking-main.o"
 	@echo "... src/executables/backTracking-main.i"
 	@echo "... src/executables/backTracking-main.s"
+	@echo "... src/executables/bottom_up-main.o"
+	@echo "... src/executables/bottom_up-main.i"
+	@echo "... src/executables/bottom_up-main.s"
 	@echo "... src/executables/bruteForce-main.o"
 	@echo "... src/executables/bruteForce-main.i"
 	@echo "... src/executables/bruteForce-main.s"
+	@echo "... src/executables/top_down-main.o"
+	@echo "... src/executables/top_down-main.i"
+	@echo "... src/executables/top_down-main.s"
 	@echo "... src/solutions/BackTracking.o"
 	@echo "... src/solutions/BackTracking.i"
 	@echo "... src/solutions/BackTracking.s"
 	@echo "... src/solutions/BruteForce.o"
 	@echo "... src/solutions/BruteForce.i"
 	@echo "... src/solutions/BruteForce.s"
+	@echo "... src/solutions/DinamicProgrammingBottomUp.o"
+	@echo "... src/solutions/DinamicProgrammingBottomUp.i"
+	@echo "... src/solutions/DinamicProgrammingBottomUp.s"
+	@echo "... src/solutions/DinamicProgrammingTopDown.o"
+	@echo "... src/solutions/DinamicProgrammingTopDown.i"
+	@echo "... src/solutions/DinamicProgrammingTopDown.s"
 	@echo "... src/solutions/KnapSack.o"
 	@echo "... src/solutions/KnapSack.i"
 	@echo "... src/solutions/KnapSack.s"
-	@echo "... test/solutions/BruteForceTest.o"
-	@echo "... test/solutions/BruteForceTest.i"
-	@echo "... test/solutions/BruteForceTest.s"
+	@echo "... test/solutions/KnapSackTest.o"
+	@echo "... test/solutions/KnapSackTest.i"
+	@echo "... test/solutions/KnapSackTest.s"
 .PHONY : help
 
 

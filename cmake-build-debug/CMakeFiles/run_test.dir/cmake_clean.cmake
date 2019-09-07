@@ -1,9 +1,11 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/run_test.dir/test/solutions/KnapSackTest.cpp.o"
   "CMakeFiles/run_test.dir/src/entities/Item.cpp.o"
   "CMakeFiles/run_test.dir/src/solutions/BruteForce.cpp.o"
-  "CMakeFiles/run_test.dir/test/solutions/BruteForceTest.cpp.o"
   "CMakeFiles/run_test.dir/src/solutions/KnapSack.cpp.o"
   "CMakeFiles/run_test.dir/src/solutions/BackTracking.cpp.o"
+  "CMakeFiles/run_test.dir/src/solutions/DinamicProgrammingTopDown.cpp.o"
+  "CMakeFiles/run_test.dir/src/solutions/DinamicProgrammingBottomUp.cpp.o"
   "run_test.pdb"
   "run_test"
 )

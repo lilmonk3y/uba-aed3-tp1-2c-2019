@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/crivera/Documents/Facultad/aed3/tp1-2c-2019
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/uba-aed3-tp1-2c-2019
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/cmake-build-debug
+-- Build files have been written to: /Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/uba-aed3-tp1-2c-2019/cmake-build-debug

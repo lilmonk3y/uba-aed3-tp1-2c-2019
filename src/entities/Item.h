@@ -10,7 +10,7 @@ class Item {
 public:
     Item(long size, long benefit);
 
-    long getSize() const;
+    long getCost() const;
 
     void setSize(long size);
 

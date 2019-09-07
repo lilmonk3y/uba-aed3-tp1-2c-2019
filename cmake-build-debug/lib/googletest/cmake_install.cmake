@@ -1,4 +1,4 @@
-# Install script for directory: /Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/lib/googletest
+# Install script for directory: /Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/uba-aed3-tp1-2c-2019/lib/googletest
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/cmake-build-debug/lib/googletest/googlemock/cmake_install.cmake")
+  include("/Users/crivera/Documents/Facultad/aed3/tp1-2c-2019/uba-aed3-tp1-2c-2019/cmake-build-debug/lib/googletest/googlemock/cmake_install.cmake")
 
 endif()
 

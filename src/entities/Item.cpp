@@ -4,7 +4,7 @@
 
 #include "Item.h"
 
-long Item::getSize() const {
+long Item::getCost() const {
     return size;
 }
 

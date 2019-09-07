@@ -3,6 +3,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/bruteforce-main.dir/src/entities/Item.cpp.o"
   "CMakeFiles/bruteforce-main.dir/src/solutions/BruteForce.cpp.o"
   "CMakeFiles/bruteforce-main.dir/src/solutions/KnapSack.cpp.o"
+  "CMakeFiles/bruteforce-main.dir/src/solutions/BackTracking.cpp.o"
+  "CMakeFiles/bruteforce-main.dir/src/solutions/DinamicProgrammingTopDown.cpp.o"
+  "CMakeFiles/bruteforce-main.dir/src/solutions/DinamicProgrammingBottomUp.cpp.o"
   "bruteforce-main.pdb"
   "bruteforce-main"
 )
